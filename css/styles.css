@@ -37,12 +37,11 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: #3EB489;
-  text-decoration: underline;
 }
 
 h3, h5 {
   color: #3EB489;
-  padding-top: 15px;
+  padding: 15px 15px;
   font-weight: normal;
   text-align: center;
 }
@@ -57,10 +56,11 @@ h6 {
 p {
   color: #3EB489;
   text-align: center;
+  padding: 10px 10px;
 }
 
-.image {
-  width: 400px;
+.title {
+  width: 600px;
   padding: 15px 15px;
   margin: 0 auto;
   display: flex;
@@ -68,6 +68,41 @@ p {
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+.section {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header {
+  height: 125px;
+  border-bottom: 5px solid #3EB489;
+}
+
+.content {
+  background-color: #EAEDF0;
+  height: 675px;
+}
+
+.header,
+.feature-1,
+.feature-3 {
+  background-color: #C9F4DE;
+}
+
+.feature-2 {
+  background-color: #EAEDF0;
+}
+
+.feature-1,
+.feature-2,
+.feature-3 {
+  border-top: 5px solid #3EB489;
+  /* border: 2px solid red;   /* For debugging */
 }
 
 /* Footer */
@@ -81,6 +116,7 @@ p {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
 }
 
 .footer-item {
@@ -88,7 +124,6 @@ p {
 }
 
 .footer-two {
-  height: 150px;
   width: 100%;
 }
 
@@ -132,19 +167,51 @@ p {
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-
+  /* DEBUG:  */
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+  .header {
+    height: 100px;
+  }
 
+  .content {
+    height: 300px;
+  }
+
+  .feature-1,
+  .feature-2,
+  .feature-3 {
+    width: 50%;
+  }
+
+  .feature-2 {
+    background-color: #C9F4DE;
+  }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
   .page {
     width: 960px;
+    margin: 0 auto;
   }
+
+  .header {
+    height: 100px;
+  }
+
+  .content {
+    height: 300px;
+  }
+
+  .feature-1,
+  .feature-2,
+  .feature-3 {
+    width: 33.3%;
+  }
+
   .footer-two {
     width: 960px;
   }
